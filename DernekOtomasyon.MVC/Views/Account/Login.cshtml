@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div> 
+
+        @if (Session["Error"] != null)
+        {
+            <h1>@Session["Error"].ToString()</h1>
+        }
+
+        <form action="@Url.Action("Login","Account")" method="post">
+
+            Kullanıcı adı: <input type="text" name="username" value="" /><br /><br />
+            Şifre: <input type="text" name="pass" value="" /><br /><br />
+                   <input type="submit" value="Giriş Yap" />
+
+        </form>
+
+
+    </div>
+</body>
+</html>
+
+
+@{ 
+
+    Session["Error"] = null;
+}

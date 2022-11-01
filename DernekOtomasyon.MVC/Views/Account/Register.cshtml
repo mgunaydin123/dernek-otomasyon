@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div>
+
+        <form action="@Url.Action("Register","Account")" method="post">
+
+            Kullanıcı Adı: <input type="text" name="username" value="" /><br />
+            Email: <input type="email" name="email" value="" /><br />
+            Şifre: <input type="text" name="pass" value="" /><br />
+            <input type="submit" value="KAYIT OL!" />
+
+
+        </form>
+    </div>
+</body>
+</html>
